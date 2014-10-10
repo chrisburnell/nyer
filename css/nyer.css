@@ -352,9 +352,12 @@ body {
           transition: opacity 0.1s linear 0.9s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent; }
-  @media (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     .bowse {
-      font-size: 6em; } }
+      font-size: 8em; } }
+  @media screen and (max-width: 500px) {
+    .bowse {
+      font-size: 5em; } }
   .bowse:active {
     opacity: 1;
     -webkit-transition: none;
@@ -456,9 +459,12 @@ body {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
-  @media (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     .instructions {
-      font-size: 2.5em; } }
+      font-size: 3.333em; } }
+  @media screen and (max-width: 500px) {
+    .instructions {
+      font-size: 2em; } }
   .bowse:active + .instructions {
     opacity: 0;
     -webkit-transition: none;

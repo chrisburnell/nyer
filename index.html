@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>NYER &ndash; Click!</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:700">
+    <link rel="stylesheet" href="nyer.css">
+    <link rel="shortcut icon" href="/icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/icon.png">
+    <link rel="author" type="text/plain" href="/humans.txt">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<body>
+
+    <audio class="audio-player">
+        <source src="air-horn.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button class="bowse" data-text="BOW$E"><img src="rickross.svg" alt=""></button>
+
+    <div class="instructions">Click or Tap!</div>
+
+    <script type="text/javascript">
+        $(document).ready( function() {
+            var audio = $('.audio-player').get(0);
+            audio.load();
+            var supportsVibrate = "vibrate" in navigator;
+            $(".bowse").click( function(e) {
+                e.preventDefault();
+                document.title = "N-N-N-N-N-NYERRRRR – Click!"
+                setTimeout( function() {
+                    document.title = "NYER – Click!";
+                }, 800);
+                audio.currentTime = 0;
+                audio.play();
+                if( supportsVibrate ) {
+                    navigator.vibrate(600);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

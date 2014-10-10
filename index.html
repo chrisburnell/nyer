@@ -42,14 +42,23 @@ layout: null
 </head>
 <body>
 
+    {% include inline-svg.html %}
+
+    <button class="bowse" data-text="BOW$E">
+        <svg><use xlink:href="#rickross" /></svg>
+    </button>
+
+    <div class="instructions">Click or Tap!</div>
+
     <audio class="audio-player">
         <source src="assets/air-horn.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <button class="bowse" data-text="BOW$E"><img src="assets/rickross.svg" alt=""></button>
-
-    <div class="instructions">Click or Tap!</div>
+    <div class="credit">
+        <svg><use xlink:href="#raven" /></svg>
+        <span>by <a href="http://chrisburnell.com" title="Chris Burnell">Chris Burnell</a></span>
+    </div>
 
     {% include js-body.html %}
 

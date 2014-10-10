@@ -476,6 +476,9 @@ body {
   right: 1em;
   font-size: 1em;
   z-index: 4; }
+  @media screen and (max-width: 500px) {
+    .credit {
+      font-size: 0.8125em; } }
   .credit svg {
     width: 2.5em;
     height: 2.5em;

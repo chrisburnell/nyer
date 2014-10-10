@@ -179,6 +179,10 @@ body {
     font-size: 1em;
     z-index: 4;
 
+    @include breakpoint("mobile") {
+        font-size: .8125em;
+    }
+
     svg {
         width:  2.5em;
         height: 2.5em;

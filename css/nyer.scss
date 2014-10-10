@@ -58,8 +58,12 @@ body {
     -webkit-tap-highlight-color: transparent;
 
 
-    @media (max-width: 700px) {
-        font-size: 6em;
+    @include breakpoint("tablet") {
+        font-size: 8em;
+    }
+
+    @include breakpoint("mobile") {
+        font-size: 5em;
     }
 
     &:active {
@@ -153,8 +157,12 @@ body {
     transition: opacity .1s linear .9s;
     transform: translateY(-50%);
 
-    @media (max-width: 700px) {
-        font-size: 2.5em;
+    @include breakpoint("tablet") {
+        font-size: 3.333em;
+    }
+
+    @include breakpoint("mobile") {
+        font-size: 2em;
     }
 
     .bowse:active + & {

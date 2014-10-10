@@ -1,9 +1,25 @@
 // Colours
+
 $gray:       #111111;
 $black:      #000000;
 $text-color: #FFFFFF;
 $brown:      rgb(196, 148, 29);
 
 // Font Stack
+
 $base-font-size:     16px;
 $primary-font-stack: "Montserrat", sans-serif;
+
+// Media Queries
+
+$tablet-wrapper-width: 800px;
+$mobile-wrapper-width: 500px;
+
+@mixin breakpoint($width) {
+    @if $width == "tablet" {
+        @media screen and (max-width: $tablet-wrapper-width) { @content ; }
+    }
+    @else if $width == "mobile" {
+        @media screen and (max-width: $mobile-wrapper-width) { @content ; }
+    }
+}

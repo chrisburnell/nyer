@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    $ NYER CREDIT
+\*------------------------------------*/
+
+.credit {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    font-size: 1em;
+    z-index: 4;
+
+    @include breakpoint("mobile") {
+        font-size: .8125em;
+    }
+
+    svg {
+        width:  2.5em;
+        height: 2.5em;
+        display: inline-block;
+        float: left;
+        margin-right: .75em;
+    }
+
+    span {
+        display: inline-block;
+        line-height: 2.5em;
+        font-style: italic;
+    }
+
+    a {
+        color: #5F8AA6;
+        font-style: normal;
+        text-decoration: none;
+    }
+
+}

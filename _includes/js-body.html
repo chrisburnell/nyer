@@ -3,7 +3,7 @@
         var audio = $('.audio-player').get(0);
         audio.load();
         var supportsVibrate = "vibrate" in navigator;
-        $(".bowse").click( function(e) {
+        $("button").click( function(e) {
             e.preventDefault();
             document.title = "{{ site.title_active }}";
             setTimeout( function() {

@@ -315,7 +315,7 @@ table {
   border-spacing: 0; }
 
 /*------------------------------------*\
-    $ NYER
+    $ BASE NYER
 \*------------------------------------*/
 html, body {
   height: 100%; }
@@ -336,7 +336,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
-.bowse {
+button {
   background-color: #000000;
   opacity: 0;
   width: 100%;
@@ -353,16 +353,16 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent; }
   @media screen and (max-width: 800px) {
-    .bowse {
+    button {
       font-size: 8em; } }
   @media screen and (max-width: 500px) {
-    .bowse {
+    button {
       font-size: 5em; } }
-  .bowse:active {
+  button:active {
     opacity: 1;
     -webkit-transition: none;
             transition: none; }
-  .bowse:before, .bowse:after {
+  button:before, button:after {
     content: attr(data-text);
     width: 100%;
     display: block;
@@ -373,27 +373,24 @@ body {
     -webkit-transform: translateY(-50%) scale(1);
         -ms-transform: translateY(-50%) scale(1);
             transform: translateY(-50%) scale(1); }
-  .bowse:active:before, .bowse:active:after {
+  button:active:before, button:active:after {
     color: gold;
     -webkit-transform: translateY(-50%) scale(1.25);
         -ms-transform: translateY(-50%) scale(1.25);
             transform: translateY(-50%) scale(1.25); }
-  .bowse:before {
+  button:before {
     text-shadow: 0 1px 0 rgba(196, 148, 29, 0.9), 0 2px 0 rgba(196, 148, 29, 0.9), 0 3px 0 rgba(196, 148, 29, 0.9), 0 4px 0 rgba(196, 148, 29, 0.9), 0 5px 0 rgba(196, 148, 29, 0.8), 0 6px 0 rgba(196, 148, 29, 0.8), 0 7px 0 rgba(196, 148, 29, 0.7), 0 8px 0 rgba(196, 148, 29, 0.7), 0 9px 0 rgba(196, 148, 29, 0.6), 0 10px 0 rgba(196, 148, 29, 0.6);
     z-index: 2; }
-  .bowse:after {
+  button:after {
     background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
     background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
     z-index: 3;
-    -webkit-animation: shiny 0.2s linear 0.2s;
-            animation: shiny 0.2s linear 0.2s; }
-  .bowse:active:after {
-    -webkit-animation: none;
-            animation: none; }
-  .bowse svg {
+    -webkit-animation: shiny 0.2s linear 0.1s infinite;
+            animation: shiny 0.2s linear 0.1s infinite; }
+  button svg {
     width: 100%;
     height: 95%;
     position: absolute;
@@ -405,53 +402,56 @@ body {
 
 @-webkit-keyframes shiny {
   16.66% {
-    background-image: -webkit-linear-gradient(#ffe566 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
-    background-image: linear-gradient(#ffe566 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%); }
+    background-image: -webkit-linear-gradient(#ffffff 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
+    background-image: linear-gradient(#ffffff 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%); }
 
   33.33% {
-    background-image: -webkit-linear-gradient(gold 0%, #ffe566 15%, moccasin 40%, gold 85%, goldenrod 100%);
-    background-image: linear-gradient(gold 0%, #ffe566 15%, moccasin 40%, gold 85%, goldenrod 100%); }
+    background-image: -webkit-linear-gradient(gold 0%, #ffffff 15%, moccasin 40%, gold 85%, goldenrod 100%);
+    background-image: linear-gradient(gold 0%, #ffffff 15%, moccasin 40%, gold 85%, goldenrod 100%); }
 
   50% {
     background-image: -webkit-linear-gradient(gold 0%, gold 15%, #ffffff 40%, gold 85%, goldenrod 100%);
     background-image: linear-gradient(gold 0%, gold 15%, #ffffff 40%, gold 85%, goldenrod 100%); }
 
   66.66% {
-    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffe566 85%, goldenrod 100%);
-    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffe566 85%, goldenrod 100%); }
+    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffffff 85%, goldenrod 100%);
+    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffffff 85%, goldenrod 100%); }
 
   83.33% {
-    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #ebc875 100%);
-    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #ebc875 100%); } }
+    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #fefdfb 100%);
+    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #fefdfb 100%); } }
 
 @keyframes shiny {
   16.66% {
-    background-image: -webkit-linear-gradient(#ffe566 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
-    background-image: linear-gradient(#ffe566 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%); }
+    background-image: -webkit-linear-gradient(#ffffff 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
+    background-image: linear-gradient(#ffffff 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%); }
 
   33.33% {
-    background-image: -webkit-linear-gradient(gold 0%, #ffe566 15%, moccasin 40%, gold 85%, goldenrod 100%);
-    background-image: linear-gradient(gold 0%, #ffe566 15%, moccasin 40%, gold 85%, goldenrod 100%); }
+    background-image: -webkit-linear-gradient(gold 0%, #ffffff 15%, moccasin 40%, gold 85%, goldenrod 100%);
+    background-image: linear-gradient(gold 0%, #ffffff 15%, moccasin 40%, gold 85%, goldenrod 100%); }
 
   50% {
     background-image: -webkit-linear-gradient(gold 0%, gold 15%, #ffffff 40%, gold 85%, goldenrod 100%);
     background-image: linear-gradient(gold 0%, gold 15%, #ffffff 40%, gold 85%, goldenrod 100%); }
 
   66.66% {
-    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffe566 85%, goldenrod 100%);
-    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffe566 85%, goldenrod 100%); }
+    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffffff 85%, goldenrod 100%);
+    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, #ffffff 85%, goldenrod 100%); }
 
   83.33% {
-    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #ebc875 100%);
-    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #ebc875 100%); } }
+    background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #fefdfb 100%);
+    background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, #fefdfb 100%); } }
 
+/*------------------------------------*\
+    $ NYER INSTRUCTIONS
+\*------------------------------------*/
 .instructions {
   opacity: 1;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 0;
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   z-index: 0;
   -webkit-transition: opacity 0.1s linear 0.9s;
@@ -461,15 +461,20 @@ body {
           transform: translateY(-50%); }
   @media screen and (max-width: 800px) {
     .instructions {
-      font-size: 3.333em; } }
+      font-size: 2em; } }
   @media screen and (max-width: 500px) {
     .instructions {
-      font-size: 2em; } }
-  .bowse:active + .instructions {
+      font-size: 1em; } }
+  .instructions h3 {
+    color: #919191; }
+  button:active + .instructions {
     opacity: 0;
     -webkit-transition: none;
             transition: none; }
 
+/*------------------------------------*\
+    $ NYER CREDIT
+\*------------------------------------*/
 .credit {
   position: absolute;
   bottom: 1em;
@@ -487,7 +492,9 @@ body {
     margin-right: 0.75em; }
   .credit span {
     display: inline-block;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+    font-style: italic; }
   .credit a {
     color: #5F8AA6;
+    font-style: normal;
     text-decoration: none; }

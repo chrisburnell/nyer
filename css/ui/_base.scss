@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $ BASE NYER
+\*------------------------------------*/
+
+html,
+body {
+    height: 100%;
+}
+html {
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+*,
+*:before,
+*:after {
+    border-box: inherit;
+}
+body {
+    background: $gray;
+    color: $text-color;
+    position: relative;
+    font: 700 normal #{$base-font-size}/1em $primary-font-stack;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}

@@ -391,7 +391,9 @@ button {
     -webkit-animation: shiny 0.2s linear 0.1s infinite;
             animation: shiny 0.2s linear 0.1s infinite; }
   button svg {
-    width: 100%;
+    width: 200vw;
+    width: 4000px;
+    min-width: 100%;
     height: 95%;
     position: absolute;
     bottom: 0;

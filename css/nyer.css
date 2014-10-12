@@ -336,7 +336,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
-button {
+.bowse {
   background-color: #000000;
   opacity: 0;
   width: 100%;
@@ -353,16 +353,16 @@ button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent; }
   @media screen and (max-width: 800px) {
-    button {
+    .bowse {
       font-size: 8em; } }
   @media screen and (max-width: 500px) {
-    button {
+    .bowse {
       font-size: 5em; } }
-  button:active {
+  .bowse:active {
     opacity: 1;
     -webkit-transition: none;
             transition: none; }
-  button:before, button:after {
+  .bowse:before, .bowse:after {
     content: attr(data-text);
     width: 100%;
     display: block;
@@ -373,24 +373,24 @@ button {
     -webkit-transform: translateY(-50%) scale(1);
         -ms-transform: translateY(-50%) scale(1);
             transform: translateY(-50%) scale(1); }
-  button:active:before, button:active:after {
+  .bowse:active:before, .bowse:active:after {
     color: gold;
     -webkit-transform: translateY(-50%) scale(1.25);
         -ms-transform: translateY(-50%) scale(1.25);
             transform: translateY(-50%) scale(1.25); }
-  button:before {
+  .bowse:before {
     text-shadow: 0 1px 0 rgba(196, 148, 29, 0.9), 0 2px 0 rgba(196, 148, 29, 0.9), 0 3px 0 rgba(196, 148, 29, 0.9), 0 4px 0 rgba(196, 148, 29, 0.9), 0 5px 0 rgba(196, 148, 29, 0.8), 0 6px 0 rgba(196, 148, 29, 0.8), 0 7px 0 rgba(196, 148, 29, 0.7), 0 8px 0 rgba(196, 148, 29, 0.7), 0 9px 0 rgba(196, 148, 29, 0.6), 0 10px 0 rgba(196, 148, 29, 0.6);
     z-index: 2; }
-  button:after {
+  .bowse:after {
     background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
     background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
     z-index: 3;
-    -webkit-animation: shiny 0.2s linear 0.1s infinite;
-            animation: shiny 0.2s linear 0.1s infinite; }
-  button svg {
+    -webkit-animation: shiny 2s linear 1s infinite;
+            animation: shiny 2s linear 1s infinite; }
+  .bowse svg {
     width: 200vw;
     width: 4000px;
     min-width: 100%;
@@ -469,7 +469,7 @@ button {
       font-size: 1em; } }
   .instructions h3 {
     color: #919191; }
-  button:active + .instructions {
+  .bowse:active + .instructions {
     opacity: 0;
     -webkit-transition: none;
             transition: none; }

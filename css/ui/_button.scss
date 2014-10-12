@@ -1,4 +1,4 @@
-button {
+.bowse {
     background-color: $black;
     opacity: 0;
     width: 100%;
@@ -65,9 +65,9 @@ button {
         background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 1em rgba($text-color, .5);
+        text-shadow: 0 0 .5em rgba($text-color, .5);
         z-index: 3;
-        animation: shiny .2s linear .1s infinite;
+        animation: shiny 2s linear 1s infinite;
     }
 
     svg {

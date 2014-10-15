@@ -19,17 +19,18 @@ input[name="toggle-horn-list"] {
         background: rgba($white, .5);
         opacity: .5;
         padding: 1em;
-        top:  .5em;
-        left: .5em;
+        top:  .625em;
+        left: 50%;
+        font-size: .8em;
         border-radius: .375em;
-        transform: translateY(-150%);
+        transform: translate3d(-50%, -150%, 0);
         transition: opacity .2s ease-in-out, transform .2s ease-in-out;
         &:hover,
         &:focus {
             opacity: 1;
         }
         #hide-horn-list:checked ~ & {
-            transform: none;
+            transform: translate3d(-50%, 0, 0);
         }
     }
     .hide-horn-list {
@@ -51,24 +52,32 @@ input[name="toggle-horn-list"] {
     }
 .horn-list {
     background: rgba($white, .5);
+    width: 90%;
     display: block;
     padding: 1em .5em;
     margin: 0;
     position: absolute;
     top:  0;
-    left: 0;
-    list-style-position: inside;
-    list-style-type: decimal-leading-zero;
+    left: 50%;
+    list-style: none;
     z-index: 6;
-    border-radius: 0 0 .375em 0;
-    transform: translateY(-100%);
+    border-radius: 0 0 .375em .375em;
+    transform: translate3d(-50%, -100%, 0);
     transition: transform .2s ease-in-out;
     #show-horn-list:checked ~ & {
-        transform: none;
+        transform: translate3d(-50%, 0, 0);
+    }
+    counter-reset: ordered-list;
+    li {
+        counter-increment: ordered-list;
+        &:before {
+            content: counter(ordered-list) ".";
+            color: rgba($white, .5);
+        }
     }
     a {
         display: inline-block;
-        padding: .5em 1em;
+        padding: .5em;
         text-decoration: none;
     }
 }

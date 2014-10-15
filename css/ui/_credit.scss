@@ -5,12 +5,12 @@
 .credits {
     position: absolute;
     bottom: 1em;
-    right: 1em;
-    font-size: 1em;
+    left: 50%;
     line-height: 2.5em;
     font-style: italic;
     text-shadow: 0 0 .5em $black;
     z-index: 4;
+    transform: translateX(-50%);
 
     @include breakpoint("mobile") {
         font-size: .8125em;

@@ -31,19 +31,17 @@ button {
     &:after {
         content: attr(data-text);
         color: gold;
-        width: 100%;
         display: block;
         position: absolute;
         top: 50%;
-        left: 0;
-        text-align: center;
+        left: 50%;
         text-transform: uppercase;
-        transform: translateY(-50%) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
     }
 
         &:active:before,
         &:active:after {
-            transform: translateY(-50%) scale(1.25);
+            transform: translate3d(-50%, -50%, 0) scale(1.25);
         }
 
     &:before {

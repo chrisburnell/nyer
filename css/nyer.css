@@ -431,20 +431,16 @@ button {
   button:before, button:after {
     content: attr(data-text);
     color: gold;
-    width: 100%;
     display: block;
     position: absolute;
     top: 50%;
-    left: 0;
-    text-align: center;
+    left: 50%;
     text-transform: uppercase;
-    -webkit-transform: translateY(-50%) scale(1);
-        -ms-transform: translateY(-50%) scale(1);
-            transform: translateY(-50%) scale(1); }
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
+            transform: translate3d(-50%, -50%, 0) scale(1); }
   button:active:before, button:active:after {
-    -webkit-transform: translateY(-50%) scale(1.25);
-        -ms-transform: translateY(-50%) scale(1.25);
-            transform: translateY(-50%) scale(1.25); }
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1.25);
+            transform: translate3d(-50%, -50%, 0) scale(1.25); }
   button:before {
     text-shadow: 0 1px 0 rgba(196, 148, 29, 0.9), 0 2px 0 rgba(196, 148, 29, 0.9), 0 3px 0 rgba(196, 148, 29, 0.9), 0 4px 0 rgba(196, 148, 29, 0.9), 0 5px 0 rgba(196, 148, 29, 0.8), 0 6px 0 rgba(196, 148, 29, 0.8), 0 7px 0 rgba(196, 148, 29, 0.7), 0 8px 0 rgba(196, 148, 29, 0.7), 0 9px 0 rgba(196, 148, 29, 0.6), 0 10px 0 rgba(196, 148, 29, 0.6);
     z-index: 2; }
@@ -530,20 +526,19 @@ input[name="toggle-horn-list"] {
   background: rgba(255, 255, 255, 0.5);
   opacity: 0.5;
   padding: 1em;
-  top: 0.5em;
-  left: 0.5em;
+  top: 0.625em;
+  left: 50%;
+  font-size: 0.8em;
   border-radius: 0.375em;
-  -webkit-transform: translateY(-150%);
-      -ms-transform: translateY(-150%);
-          transform: translateY(-150%);
+  -webkit-transform: translate3d(-50%, -150%, 0);
+          transform: translate3d(-50%, -150%, 0);
   -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
           transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; }
   .show-horn-list:hover, .show-horn-list:focus {
     opacity: 1; }
   #hide-horn-list:checked ~ .show-horn-list {
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none; }
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0); }
 
 .hide-horn-list {
   background: rgba(0, 0, 0, 0.8);
@@ -561,28 +556,32 @@ input[name="toggle-horn-list"] {
 
 .horn-list {
   background: rgba(255, 255, 255, 0.5);
+  width: 90%;
   display: block;
   padding: 1em 0.5em;
   margin: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  list-style-position: inside;
-  list-style-type: decimal-leading-zero;
+  left: 50%;
+  list-style: none;
   z-index: 6;
-  border-radius: 0 0 0.375em 0;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  border-radius: 0 0 0.375em 0.375em;
+  -webkit-transform: translate3d(-50%, -100%, 0);
+          transform: translate3d(-50%, -100%, 0);
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
-          transition: transform 0.2s ease-in-out; }
+          transition: transform 0.2s ease-in-out;
+  counter-reset: ordered-list; }
   #show-horn-list:checked ~ .horn-list {
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none; }
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0); }
+  .horn-list li {
+    counter-increment: ordered-list; }
+    .horn-list li:before {
+      content: counter(ordered-list) ".";
+      color: rgba(255, 255, 255, 0.5); }
   .horn-list a {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     text-decoration: none; }
 
 /*------------------------------------*\
@@ -591,12 +590,14 @@ input[name="toggle-horn-list"] {
 .credits {
   position: absolute;
   bottom: 1em;
-  right: 1em;
-  font-size: 1em;
+  left: 50%;
   line-height: 2.5em;
   font-style: italic;
   text-shadow: 0 0 0.5em #000000;
-  z-index: 4; }
+  z-index: 4;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
   @media screen and (max-width: 500px) {
     .credits {
       font-size: 0.8125em; } }

@@ -572,7 +572,7 @@ input[name="toggle-horn-list"] {
         -ms-transform: none;
             transform: none; }
   .horn-list a {
-    display: block;
+    display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none; }
 

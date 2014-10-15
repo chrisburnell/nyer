@@ -482,6 +482,8 @@ body {
   bottom: 1em;
   right: 1em;
   font-size: 1em;
+  line-height: 2.5em;
+  font-style: italic;
   z-index: 4; }
   @media screen and (max-width: 500px) {
     .credit {
@@ -490,12 +492,8 @@ body {
     width: 2.5em;
     height: 2.5em;
     display: inline-block;
-    float: left;
-    margin-right: 0.75em; }
-  .credit span {
-    display: inline-block;
-    line-height: 2.5em;
-    font-style: italic; }
+    vertical-align: middle;
+    margin-left: 0.5em; }
   .credit a {
     color: #5F8AA6;
     font-style: normal;

@@ -7,6 +7,8 @@
     bottom: 1em;
     right: 1em;
     font-size: 1em;
+    line-height: 2.5em;
+    font-style: italic;
     z-index: 4;
 
     @include breakpoint("mobile") {
@@ -17,14 +19,8 @@
         width:  2.5em;
         height: 2.5em;
         display: inline-block;
-        float: left;
-        margin-right: .75em;
-    }
-
-    span {
-        display: inline-block;
-        line-height: 2.5em;
-        font-style: italic;
+        vertical-align: middle;
+        margin-left: .5em;
     }
 
     a {

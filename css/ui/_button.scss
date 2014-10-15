@@ -60,7 +60,7 @@ button {
     }
 
     &:after {
-        background-image: linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
+        background-image: -webkit-linear-gradient(gold 0%, gold 15%, moccasin 40%, gold 85%, goldenrod 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow: 0 0 .5em rgba($white, .5);

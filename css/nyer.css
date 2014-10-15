@@ -426,6 +426,7 @@ button {
     top: 50%;
     left: 0;
     text-align: center;
+    text-transform: uppercase;
     -webkit-transform: translateY(-50%) scale(1);
         -ms-transform: translateY(-50%) scale(1);
             transform: translateY(-50%) scale(1); }

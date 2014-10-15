@@ -33,6 +33,8 @@ a {
     color: $white;
 }
 
+
+/*
 h1 {
     @extend %full;
     opacity: .05;
@@ -53,6 +55,10 @@ h1 {
         font-size: 4em;
     }
 
+}
+*/
+h1 {
+    display: none;
 }
 
 .nyer {

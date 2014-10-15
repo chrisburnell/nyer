@@ -4,9 +4,17 @@ description: "A Simple Rap Air Horn. N-N-N-N-N-NYERRRRR!! ’Nuff said."
 tagline: "N-N-N-N-N-NYERRRRR"
 
 url: http://nyer.audio
+author: Chris Burnell
+author_url: http://chrisburnell.com
+author_email: me@chrisburnell.com
+author_twitter: iamchrisburnell
 
 timezone: Europe/London
 destination: ./_site
+layouts: ./_layouts
+
+permalink: /:title
+paginate: 100
 
 gems:
   - jekyll-redirect-from

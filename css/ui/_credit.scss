@@ -1,14 +1,15 @@
 /*------------------------------------*\
-    $ NYER CREDIT
+    $ NYER CREDITs
 \*------------------------------------*/
 
-.credit {
+.credits {
     position: absolute;
     bottom: 1em;
     right: 1em;
     font-size: 1em;
     line-height: 2.5em;
     font-style: italic;
+    text-shadow: 0 0 .5em $black;
     z-index: 4;
 
     @include breakpoint("mobile") {

@@ -1,0 +1,34 @@
+{% include header.html %}
+
+    <section class="nyer" role="main">
+
+        <h1>{{ page.title }}</h1>
+
+        <button data-text="{{ page.title }}">
+            <img src="/images/{{ page.image }}" alt="{{ page.title }}">
+        </button>
+
+        <div class="instructions">
+            <h2>Click or Tap!</h2>
+            <h3>Warning: Audio will play!</h3>
+        </div>
+
+        <audio>
+            <source src="/sounds/{{ page.sound }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <input type="radio" name="toggle-horn-list" id="show-horn-list" aria-hidden="true">
+        <input type="radio" name="toggle-horn-list" id="hide-horn-list" aria-hidden="true" checked>
+        <label class="show-horn-list" for="show-horn-list" aria-hidden="true">Show More</label>
+        <label class="hide-horn-list" for="hide-horn-list" aria-hidden="true"><span>Close Menu</span></label>
+        <ol class="horn-list" role="list">
+            <li><a href="/" title="Rick Ross">Rick Ross</a></li>
+            {% for post in site.posts reversed %}
+                <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ol>
+
+    </section>
+
+{% include footer.html %}

@@ -3,16 +3,13 @@
 \*------------------------------------*/
 
 .instructions {
+    @extend %full;
     opacity: 1;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
     font-size: 3em;
     text-align: center;
+    white-space: nowrap;
     z-index: 0;
     transition: opacity .1s linear .9s;
-    transform: translateY(-50%);
 
     @include breakpoint("tablet") {
         font-size: 2em;
@@ -26,7 +23,7 @@
         color: lighten($gray, 50%);
     }
 
-    .bowse:active + & {
+    button:active + & {
         opacity: 0;
         transition: none;
     }

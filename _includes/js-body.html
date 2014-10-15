@@ -1,19 +1,17 @@
 <script type="text/javascript">
-    $(document).ready( function() {
-        var audio = $('.audio-player').get(0);
-        audio.load();
-        var supportsVibrate = "vibrate" in navigator;
-        $("button").click( function(e) {
-            e.preventDefault();
-            document.title = "{{ site.title_active }}";
-            setTimeout( function() {
-                document.title = "{{ site.title }}";
-            }, 800);
-            audio.currentTime = 0;
-            audio.play();
-            if( supportsVibrate ) {
-                navigator.vibrate(600);
-            }
-        });
+    var audio = document.getElementsByTagName('audio')[0];
+    audio.load();
+    var supportsVibrate = 'vibrate' in navigator,
+        pageTitle = document.title;
+    document.getElementsByTagName('button')[0].addEventListener('click', function() {
+        document.title = '{{ page.title_active }}! ' + pageTitle;
+        setTimeout( function() {
+            document.title = pageTitle;
+        }, 800);
+        audio.currentTime = 0;
+        audio.play();
+        if( supportsVibrate ) {
+            navigator.vibrate(600);
+        }
     });
 </script>

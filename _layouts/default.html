@@ -6,7 +6,7 @@
 
         <h1>{{ page.title }}</h1>
 
-        <button data-text="{{ page.title }}">
+        <button data-text="{% if page.text %}{{ page.text }}{% else %}{{ page.title }}{% endif %}">
             <img src="/images/{{ page.image }}" alt="{{ page.title }}">
         </button>
 

@@ -29,6 +29,7 @@ button {
     &:before,
     &:after {
         content: attr(data-text);
+        color: gold;
         width: 100%;
         display: block;
         position: absolute;
@@ -41,7 +42,6 @@ button {
 
         &:active:before,
         &:active:after {
-            color: gold;
             transform: translateY(-50%) scale(1.25);
         }
 

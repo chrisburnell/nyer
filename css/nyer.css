@@ -420,6 +420,7 @@ button {
             transition: none; }
   button:before, button:after {
     content: attr(data-text);
+    color: gold;
     width: 100%;
     display: block;
     position: absolute;
@@ -431,7 +432,6 @@ button {
         -ms-transform: translateY(-50%) scale(1);
             transform: translateY(-50%) scale(1); }
   button:active:before, button:active:after {
-    color: gold;
     -webkit-transform: translateY(-50%) scale(1.25);
         -ms-transform: translateY(-50%) scale(1.25);
             transform: translateY(-50%) scale(1.25); }

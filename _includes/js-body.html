@@ -1,11 +1,12 @@
 <script type="text/javascript">
     // Handle Audio
-    var audio = document.getElementsByTagName('audio')[0];
+    var audio = document.getElementsByTagName('audio')[0],
+        supportsVibrate = 'vibrate' in navigator,
+        pageTitle = document.title,
+        activePageTitle = document.getElementsByTagName('h2')[0].innerHTML;
     audio.load();
-    var supportsVibrate = 'vibrate' in navigator,
-        pageTitle = document.title;
     document.getElementsByTagName('button')[0].addEventListener('click', function() {
-        document.title = '{{ page.title_active }}! ' + pageTitle;
+        document.title = activePageTitle + ' – {{ site.title }}';
         setTimeout( function() {
             document.title = pageTitle;
         }, 800);

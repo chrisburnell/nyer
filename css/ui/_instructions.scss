@@ -19,8 +19,24 @@
         font-size: 1em;
     }
 
+    h2,
+    h3 {
+        line-height: 1.5em;
+        margin: 0;
+    }
+
+    h2 {
+        margin-bottom: .5em;
+    }
+
     h3 {
         color: lighten($gray, 50%);
+        font-size: .8em;
+
+        @include breakpoint("mobile") {
+            font-size: 1em;
+        }
+
     }
 
     button:active + & {

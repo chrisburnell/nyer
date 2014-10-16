@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $ NYER CREDITs
+    $ NYER CREDITS
 \*------------------------------------*/
 
 .credits {
@@ -7,8 +7,8 @@
     bottom: 1em;
     left: 50%;
     line-height: 2.5em;
-    font-style: italic;
     text-shadow: 0 0 .5em $black;
+    white-space: nowrap;
     z-index: 4;
     transform: translateX(-50%);
 
@@ -21,13 +21,26 @@
         height: 2.5em;
         display: inline-block;
         vertical-align: middle;
-        margin-left: .5em;
+        margin-left: .25em;
     }
 
     a {
-        color: #5F8AA6;
-        font-style: normal;
+        color: $blue;
         text-decoration: none;
+    }
+
+    div {
+        display: inline;
+        @include breakpoint("mobile") {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @include breakpoint("mobile") {
+        span {
+            display: none;
+        }
     }
 
 }

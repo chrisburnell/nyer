@@ -4,33 +4,44 @@
 
     <section class="nyer" role="main">
 
-        <h1>{{ page.title }}</h1>
+        <article>
 
-        <button data-text="{% if page.text %}{{ page.text }}{% else %}{{ page.title }}{% endif %}">
-            <img src="/images/{{ page.image }}" alt="{{ page.title }}">
-        </button>
+            <h1 role="heading">{{ page.title }}</h1>
 
-        <div class="instructions">
-            <h2>Click or Tap!</h2>
-            <h3>Warning: Audio will play!</h3>
-            <noscript>You must have Javascript enabled to wild out.</noscript>
-        </div>
+            <button data-text="{% if page.text %}{{ page.text }}{% else %}{{ page.title }}{% endif %}">
+                <img src="/images/{{ page.image }}" alt="{{ page.title }}" role="presentation">
+            </button>
 
-        <audio>
-            <source src="/sounds/{{ page.sound }}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+            <div class="instructions">
+                <h2>Click or Tap!</h2>
+                <h3>Warning: Audio will play!</h3>
+                <noscript>You must have Javascript enabled to wild out.</noscript>
+            </div>
 
-        <input type="radio" name="toggle-horn-list" id="show-horn-list" aria-hidden="true">
-        <input type="radio" name="toggle-horn-list" id="hide-horn-list" aria-hidden="true" checked>
-        <label class="show-horn-list" for="show-horn-list" aria-hidden="true">More Horns</label>
-        <label class="hide-horn-list" for="hide-horn-list" aria-hidden="true"><span>Close Menu</span></label>
-        <ol class="horn-list" role="list">
-            <li><a href="/" title="Classic Air Horn">Classic Air Horn</a></li>
-            {% for post in site.posts reversed %}
-                <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ol>
+            <audio>
+                <source src="/sounds/{{ page.sound }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+        </article>
+
+        <aside role="complementary">
+
+            <input type="radio" name="toggle-horn-list" id="show-horn-list" aria-hidden="true">
+            <input type="radio" name="toggle-horn-list" id="hide-horn-list" aria-hidden="true" checked>
+            <label class="show-horn-list" for="show-horn-list" aria-hidden="true">More Horns</label>
+            <label class="hide-horn-list" for="hide-horn-list" aria-hidden="true"><span>Close Menu</span></label>
+
+            <div class="horn-list-container">
+                <ol class="horn-list" role="list">
+                    <li><a href="/" title="Classic Air Horn">Classic Air Horn</a></li>
+                    {% for post in site.posts reversed %}
+                        <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ol>
+            </div>
+
+        </aside>
 
     </section>
 

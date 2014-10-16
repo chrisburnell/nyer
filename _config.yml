@@ -7,6 +7,7 @@ author: Chris Burnell
 author_url: http://chrisburnell.com
 author_email: me@chrisburnell.com
 author_twitter: iamchrisburnell
+author_github: https://github.com/chrisburnell/nyer
 
 timezone: Europe/London
 destination: ./_site

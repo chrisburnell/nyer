@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<nav class="horns" role="navigation">
+    <ul class="horns-list">
+    {% for horn in site.data.horns %}
+        <li class="horns-list-item" id="{{ horn.title | slugify }}">
+            <audio>
+                <source src="/audio/{{ horn.audio }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="/images/{{ horn.image }}">
+            <strong>{{ horn.title }}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+</nav>

@@ -11,7 +11,6 @@ var gulp         = require('gulp'),
     notify       = require('gulp-notify'),
     rename       = require('gulp-rename'),
     sass         = require('gulp-sass'),
-    sassdoc      = require('sassdoc'),
     watch        = require('gulp-watch');
 
 // Define the locations of our assets
@@ -52,6 +51,7 @@ gulp.task('css', function() {
 // Default task
 gulp.task('default', function() {
     gulp.start('css');
+});
 
 // -----------------------------------------------------------------------------
 

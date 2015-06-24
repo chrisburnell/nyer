@@ -567,6 +567,19 @@ figure figcaption
     width: 1140px;
 }
 
+.horns-list
+{
+    font-size: 0;
+}
+.horns-list li
+{
+    font-size: 1rem;
+
+    display: inline-block;
+
+    width: 25%;
+}
+
 /**
  * Contains embedded media properly and allows them to be dynamically resized.
  */

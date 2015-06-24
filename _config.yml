@@ -1,0 +1,21 @@
+title: NYER
+title_special: N-N-N-N-N-NYERRRRR!
+
+author:         Chris Burnell
+author_twitter: iamchrisburnell
+
+url:     https://nyer.audio
+baseurl: ""
+
+url_twitter: https://twitter.com/iamchrisburnell
+
+copyright:     Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported
+url_copyright: http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
+
+timezone: Europe/London
+
+destination: ./_site
+exclude: ['node_modules', '.sass-cache']
+
+gems:
+- jekyll-sitemap

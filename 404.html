@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<nav class="horns" role="navigation">
+    <ul class="horns-list">
+        <li class="horns-list-item" id="404">
+            <audio>
+                <source src="/audio/404.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="/images/tim-allen.png">
+            <strong>404</strong>
+        </li>
+    {% for horn in site.data.horns %}
+        <li class="horns-list-item" id="{{ horn.title | slugify }}">
+            <audio>
+                <source src="/audio/{{ horn.audio }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="/images/{{ horn.image }}">
+            <strong>{{ horn.title }}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+</nav>

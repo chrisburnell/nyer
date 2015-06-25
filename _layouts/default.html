@@ -23,22 +23,22 @@ layout: null
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
-    <meta name="description" content="DESCRIPTION">
+    <meta name="description" content="{{ site.lede }}">
     <meta name="theme-color" content="#5f8aa6">
 
     <!-- Twitter Microdata and OpenGraph -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@iamchrisburnell">
     <meta name="twitter:title" content="{{ site.title }}">
-    <meta name="twitter:description" content="DESCRIPTION">
-    <meta name="twitter:image:src" content="IMAGE">
+    <meta name="twitter:description" content="{{ site.lede }}">
+    <meta name="twitter:image:src" content="{{ '/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
     <meta name="twitter:domain" content="nyer.audio">
 
     <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:description" content="DESCRIPTION">
+    <meta property="og:description" content="{{ site.lede }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nyer.audio">
-    <meta property="og:image" content="IMAGE">
+    <meta property="og:image" content="{{ '/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Pull fonts from Typekit -->
     <script>
@@ -67,7 +67,7 @@ layout: null
         </symbol>
     </svg>
 
-    <main class="wrap  clear  content" role="main">
+    <main class="wrap--full-width  clear" role="main">
 
         <h1>NYER</h1>
 
@@ -77,7 +77,7 @@ layout: null
 
     <!-- Play dat audio fam'ting -->
     <script>
-        var audioItems = document.getElementsByClassName('horns-list-item');
+        var audioItems = document.getElementsByClassName('horns-list-item-anchor');
         var supportsVibrate = "vibrate" in navigator;
 
         [].forEach.call(audioItems, function(audioItem) {

@@ -569,15 +569,78 @@ figure figcaption
 
 .horns-list
 {
-    font-size: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+            align-content: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
-.horns-list li
+.horns-list .horns-list-item
 {
-    font-size: 1rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 275px;
+        -ms-flex: 1 275px;
+            flex: 1 275px;
+}
+.horns-list .horns-list-item-anchor
+{
+    position: relative;
 
-    display: inline-block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    overflow: hidden; 
 
-    width: 25%;
+    width: 100%;
+    height: 12em;
+    margin: .5em;
+    padding: .5em;
+
+    color: #f9f9f9;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.horns-list .horns-list-item-anchor:target
+{
+    background-color: rgba(249, 249, 249, .1);
+}
+.horns-list .horns-list-item-anchor img
+{
+    position: absolute;
+    z-index: -1; 
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
 }
 
 /**

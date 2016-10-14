@@ -24,8 +24,8 @@ layout: null
 
     <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
     <meta name="description" content="{{ site.lede }}">
-    <meta name="theme-color" content="#5f8aa6">
-    
+    <meta name="theme-color" content="#daa520">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Twitter Microdata and OpenGraph -->
@@ -42,69 +42,283 @@ layout: null
     <meta property="og:url" content="https://nyer.audio">
     <meta property="og:image" content="{{ '/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Pull fonts from Typekit -->
-    <script>
-        (function(d) {
-            var typekitTimeout = 5000;
-            if( window.sessionStorage ) {
-                if( sessionStorage.getItem('useTypekit') === 'false' ) {
-                    typekitTimeout = 0;
-                }
-            }
-            var config = {
-                kitId: 'bbn1puz',
-                scriptTimeout: typekitTimeout
-            },
-            h = d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-    </script>
+    <style>
+        /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+        html {
+          box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+
+        body {
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .nyer {
+          background-color: #cccccc;
+          color: #080808;
+          width: 100%;
+          height: 100vh;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          border-width: 0;
+          overflow: hidden;
+          font-size: 25vmin;
+          -webkit-transition: all 0.05s ease;
+          transition: all 0.05s ease;
+        }
+        .nyer .text {
+          font-size: 0;
+          -webkit-transition: font-size 0.05s ease;
+          transition: font-size 0.05s ease;
+          -webkit-perspective: 1000;
+                  perspective: 1000;
+          -webkit-transform-origin: center;
+                  transform-origin: center;
+          -webkit-transform: rotateZ(-5deg);
+                  transform: rotateZ(-5deg);
+          z-index: 2;
+        }
+        .nyer svg {
+          width: 30vw;
+          height: auto;
+          -webkit-transition: -webkit-transform 0.05s ease;
+          transition: -webkit-transform 0.05s ease;
+          transition: transform 0.05s ease;
+          transition: transform 0.05s ease, -webkit-transform 0.05s ease;
+          -webkit-transform-origin: center;
+                  transform-origin: center;
+          -webkit-transform: rotateZ(0);
+                  transform: rotateZ(0);
+          z-index: 2;
+        }
+        .nyer:active {
+          background-color: #080808;
+          color: white;
+        }
+        .nyer:active .text {
+          font-size: inherit;
+          -webkit-animation: shake-text 0.15s steps(4) infinite;
+                  animation: shake-text 0.15s steps(4) infinite;
+        }
+        @-webkit-keyframes shake-text {
+          0% {
+            -webkit-transform: rotateZ(-5deg);
+                    transform: rotateZ(-5deg);
+          }
+          25% {
+            -webkit-transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
+                    transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
+          }
+          50% {
+            -webkit-transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
+                    transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
+          }
+          75% {
+            -webkit-transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
+                    transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
+          }
+          100% {
+            -webkit-transform: rotateZ(-5deg);
+                    transform: rotateZ(-5deg);
+          }
+        }
+        @keyframes shake-text {
+          0% {
+            -webkit-transform: rotateZ(-5deg);
+                    transform: rotateZ(-5deg);
+          }
+          25% {
+            -webkit-transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
+                    transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
+          }
+          50% {
+            -webkit-transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
+                    transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
+          }
+          75% {
+            -webkit-transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
+                    transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
+          }
+          100% {
+            -webkit-transform: rotateZ(-5deg);
+                    transform: rotateZ(-5deg);
+          }
+        }
+        .nyer:active svg {
+          fill: white;
+          -webkit-transform: rotateZ(-15deg);
+                  transform: rotateZ(-15deg);
+          -webkit-animation: shake-fa 0.2s steps(4) infinite;
+                  animation: shake-fa 0.2s steps(4) infinite;
+        }
+        @-webkit-keyframes shake-fa {
+          0% {
+            -webkit-transform: rotateZ(-15deg);
+                    transform: rotateZ(-15deg);
+          }
+          25% {
+            -webkit-transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
+                    transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
+          }
+          50% {
+            -webkit-transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
+                    transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
+          }
+          75% {
+            -webkit-transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
+                    transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
+          }
+          100% {
+            -webkit-transform: rotateZ(-15deg);
+                    transform: rotateZ(-15deg);
+          }
+        }
+        @keyframes shake-fa {
+          0% {
+            -webkit-transform: rotateZ(-15deg);
+                    transform: rotateZ(-15deg);
+          }
+          25% {
+            -webkit-transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
+                    transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
+          }
+          50% {
+            -webkit-transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
+                    transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
+          }
+          75% {
+            -webkit-transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
+                    transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
+          }
+          100% {
+            -webkit-transform: rotateZ(-15deg);
+                    transform: rotateZ(-15deg);
+          }
+        }
+        .nyer:active .sunburst, .nyer:active .sunburst:before, .nyer:active .sunburst:after {
+          opacity: 1;
+        }
+
+        .sunburst, .sunburst:before, .sunburst:after {
+          background: -webkit-radial-gradient(circle, #daa520, rgba(0, 0, 0, 0) 3%), -webkit-linear-gradient(82deg, goldenrod       49.5%, transparent 50.5%), -webkit-linear-gradient(98deg, transparent 49.5%, goldenrod 50.5%), -webkit-linear-      gradient(98deg, goldenrod 49.5%, transparent 50.5%), -webkit-linear-gradient(82deg, transparent 49.5%, goldenrod      50.5%), -webkit-linear-gradient(8deg, transparent 49.5%, goldenrod 50.5%), -webkit-linear-gradient(352deg,        goldenrod 49.5%, transparent 50.5%), -webkit-linear-gradient(352deg, transparent 49.5%, goldenrod 50.5%), -webkit      -linear-gradient(8deg, goldenrod 49.5%, transparent 50.5%);
+          background: radial-gradient(circle, #daa520, rgba(0, 0, 0, 0) 3%), linear-gradient(8deg, goldenrod 49.5%, transparent      50.5%), linear-gradient(-8deg, transparent 49.5%, goldenrod 50.5%), linear-gradient(-8deg, goldenrod 49.5%,        transparent 50.5%), linear-gradient(8deg, transparent 49.5%, goldenrod 50.5%), linear-gradient(82deg, transparent       49.5%, goldenrod 50.5%), linear-gradient(98deg, goldenrod 49.5%, transparent 50.5%), linear-gradient(98deg,       transparent 49.5%, goldenrod 50.5%), linear-gradient(82deg, goldenrod 49.5%, transparent 50.5%);
+          background-repeat: no-repeat;
+          background-size: 100% 100%, 50% 7%, 50% 7%, 50% 7%, 50% 7%, 7% 50%, 7% 50%, 7% 50%, 7% 50%;
+          background-position: 0 0, 0 46.5%, 0 53.5%, 100% 46.5%, 100% 53.5%, 46.5% 0, 53.5% 0, 46.5% 100%, 53.5% 100%;
+          opacity: 0;
+          width: 200vw;
+          height: 200vw;
+          margin: -100vw 0 0 -100vw;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-animation: rotate 4s linear infinite;
+                  animation: rotate 4s linear infinite;
+          -webkit-transition: opacity 0.05s ease;
+          transition: opacity 0.05s ease;
+          will-change: opacity, transform;
+          z-index: 1;
+        }
+        @-webkit-keyframes rotate {
+          from {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+          }
+        }
+        @keyframes rotate {
+          from {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+          }
+        }
+        .sunburst:before, .sunburst:after {
+          content: "";
+          position: absolute;
+          -webkit-animation-name: none;
+                  animation-name: none;
+        }
+        .sunburst:before {
+          -webkit-transform: rotate(30deg);
+                  transform: rotate(30deg);
+        }
+        .sunburst:after {
+          -webkit-transform: rotate(60deg);
+                  transform: rotate(60deg);
+        }
+
+        audio {
+          visiblity: hidden;
+        }
+    </style>
 
 </head>
 
 <body itemscope itemtype="http://data-vocabulary.org/WebPage">
 
-    <svg class="svg--master" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <symbol id="svg--raven" viewBox="0 0 120 120">
-            <path d="M3.3.4c1.2-1 4 0 6 0 14.5 5.3 23.5 16 38 21.3 4.5 10.2 8 21.4 13.3 30.7 7-.7 12 .5 17.4-1.3 2.3-1.2-3-2.2-.7-4 4 1.8 9 2 12.7 3.7-.3-3-3.5-3.2-4-6 8.3-1.5 9.5 4.2 14.7 6-.7-3.4-4.8-8.8-1.4-12 3.8 1.7 4.7 6.5 8 8.7-3-5-2-9.5 0-15.3 3 6 3 14.7 8 18.7 1-4.3 0-10.8 4.7-11.4v2c-1.6 6.5-.2 15.8-.7 23.4-6 0-6.6 3.7-13.3 2-7.5 3.4-14.7 7-22 10.7.7 4 4.8 4.6 5.3 8.7-5.2 3.8-2.5 14.3-4.6 19.5-5-4.7-5.2-13-12-14.6-9.2-2.3-15.5 5.2-23.4 7.2.4 9.8 8.7 19-2.4 22.4l1-2.4c1.6-2.3 0-.3-1.8-2.4 1.2-.4 3-.3 3.7-1.8.2-1.3.6-2-.7-3.3-2.6-3-8.2 1.8-9.5 1.5-.5-4.5 5-3.3 6-6.6 1.3 0-1-1.6 0-3.3-3 .8-2 5-5.6 5 0-2 1.5-2 1.4-4-1.7-.4-1.6 1-3.5.6 1-2 4.4-1.6 3.5-5.4-1.4-1-4.5 0-5.5-1.3 2.2-1 4-2.4 7.4-2v-4C37 91 30 88 22.2 88l-.6-.5C20.3 84 17.4 82.3 13 82l-.7-.5C10 76 2.7 71 1.3 68.5.3 66 0 63.7 0 62c0-.3.5-.5 1-.3l.8.7c7.7 5 21.4 8.3 30.2 7.3 1-2.5-2-1.3-1.4-3.3 4.8-1.5 9-3.4 12.7-6-10-5-14-16.4-14.7-30.7C20.6 17.7 2 1.2 3.3.4zm44.7 94l2.6-2c-.5-.2-.7-.6-.6-1.3h-2.7c.4 1-.8 3.8.7 3.7z" fill="#5F8AA6" />
-        </symbol>
-    </svg>
+    <button class="nyer">
+        <svg version="1.1" id="Megaphone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+            <path d="M17.223,7.03c-1.584-3.686-4.132-6.49-5.421-5.967c-2.189,0.891,1.304,5.164-9.447,9.533
+                c-0.929,0.379-1.164,1.888-0.775,2.792c0.388,0.902,1.658,1.801,2.587,1.424c0.161-0.066,0.751-0.256,0.751-0.256
+                c0.663,0.891,1.357,0.363,1.604,0.928c0.296,0.68,0.939,2.158,1.158,2.66c0.219,0.502,0.715,0.967,1.075,0.83
+                c0.359-0.137,1.582-0.602,2.05-0.779c0.468-0.178,0.579-0.596,0.436-0.924c-0.154-0.355-0.786-0.459-0.967-0.873
+                c-0.18-0.412-0.769-1.738-0.938-2.156c-0.23-0.568,0.259-1.031,0.97-1.104c4.894-0.512,5.809,2.512,7.475,1.834
+                C19.068,14.447,18.806,10.713,17.223,7.03z M16.672,13.006c-0.287,0.115-2.213-1.402-3.443-4.267
+                c-1.231-2.863-1.076-5.48-0.79-5.597c0.286-0.115,2.165,1.717,3.395,4.58C17.065,10.585,16.958,12.889,16.672,13.006z"/>
+        </svg>
+        <span class="text">NYERRR</span>
+        <div class="sunburst"></div>
+    </button>
 
-    <main class="wrap--full-width  clear" role="main">
-
-        <h1>NYER</h1>
-
-        {{ content }}
-
-    </main>
+    <audio src="{{ page.audio | prepend: '/' | prepend: site.baseurl | prepend: site.url }}"></audio>
 
     <!-- Play dat audio fam'ting -->
     <script>
-        var audioItems = document.getElementsByClassName('horns-list-item-anchor');
-        var supportsVibrate = "vibrate" in navigator;
+        var button = document.querySelector('button');
+        var audio = document.querySelector('audio');
 
-        [].forEach.call(audioItems, function(audioItem) {
-            audioItem.addEventListener('click', function() {
-                playAudio(audioItem.firstElementChild);
-            });
+        button.addEventListener('mousedown', function() {
+          audio.currentTime = 0;
+          audio.play();
+
+          document.title = "N-N-N-N-N-NYERRRRR!";
+          setTimeout( function() {
+            document.title = "NYERRR"
+          }, 600);
+
+          if ("vibrate" in navigator) {
+            navigator.vibrate(600);
+          }
         });
-
-        function playAudio(player) {
-            document.title = "{{ site.title_special }}";
-            setTimeout( function() {
-                document.title = "{{ site.title }}"
-            }, 600);
-
-            player.currentTime = 0;
-            player.play();
-
-            if( supportsVibrate ) {
-                navigator.vibrate(600);
-            }
-        }
     </script>
-
-    <!-- Google Analytics -->
-    <script>!function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r,i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date,a=s.createElement(o),m=s.getElementsByTagName(o)[0],a.async=1,a.src=g,m.parentNode.insertBefore(a,m)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-10353655-2","auto"),ga("send","pageview");</script>
 
 </body>
 </html>

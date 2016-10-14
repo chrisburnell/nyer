@@ -11,5 +11,3 @@
 
 User-agent: *
 Sitemap: https://nyer.audio/sitemap.xml
-Disallow: /images/
-Disallow: /audio/

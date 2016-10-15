@@ -60,7 +60,7 @@ layout: null
         <div class="sunburst"></div>
     </button>
 
-    <audio src="{{ page.audio | prepend: '/' | prepend: site.baseurl | prepend: site.url }}"></audio>
+    <audio src="{{ page.audio | prepend: '/' | prepend: site.baseurl | prepend: site.url }}" preload="auto"></audio>
 
     <!-- Play dat audio fam'ting -->
     <script src="/nyer.js"></script>

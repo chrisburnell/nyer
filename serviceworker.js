@@ -8,7 +8,7 @@
 
 
 // Set a name for the current cache
-const version = '001';
+const version = '002';
 const cacheName = `nyer_${version}`;
 
 // Default files to always cache

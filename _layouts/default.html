@@ -9,11 +9,11 @@ layout: null
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
 
     <title>{{ site.title }}</title>
 
-    <link rel="stylesheet" href="/css/nyer.min.css">
+    <link rel="stylesheet" href="/nyer.css">
 
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/favicon.png">
@@ -42,246 +42,6 @@ layout: null
     <meta property="og:url" content="https://nyer.audio">
     <meta property="og:image" content="{{ '/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
 
-    <style>
-        /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
-
-        html {
-          box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-          box-sizing: inherit;
-        }
-
-        body {
-          width: 100%;
-          height: 100vh;
-          overflow: hidden;
-        }
-
-        .nyer {
-          background-color: #cccccc;
-          color: #080808;
-          width: 100%;
-          height: 100vh;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: column;
-              -ms-flex-direction: column;
-                  flex-direction: column;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          border-width: 0;
-          overflow: hidden;
-          font-size: 25vmin;
-          -webkit-transition: all 0.05s ease;
-          transition: all 0.05s ease;
-        }
-        .nyer .text {
-          font-size: 0;
-          -webkit-transition: font-size 0.05s ease;
-          transition: font-size 0.05s ease;
-          -webkit-perspective: 1000;
-                  perspective: 1000;
-          -webkit-transform-origin: center;
-                  transform-origin: center;
-          -webkit-transform: rotateZ(-5deg);
-                  transform: rotateZ(-5deg);
-          z-index: 2;
-          pointer-events: none;
-        }
-        .nyer svg {
-          width: 30vw;
-          height: auto;
-          -webkit-transition: -webkit-transform 0.05s ease;
-          transition: -webkit-transform 0.05s ease;
-          transition: transform 0.05s ease;
-          transition: transform 0.05s ease, -webkit-transform 0.05s ease;
-          -webkit-transform-origin: center;
-                  transform-origin: center;
-          -webkit-transform: rotateZ(0);
-                  transform: rotateZ(0);
-          z-index: 2;
-          pointer-events: none;
-        }
-        .nyer:active {
-          background-color: #080808;
-          color: white;
-        }
-        .nyer:active .text {
-          font-size: inherit;
-          -webkit-animation: shake-text 0.15s steps(4) infinite;
-                  animation: shake-text 0.15s steps(4) infinite;
-        }
-        @-webkit-keyframes shake-text {
-          0% {
-            -webkit-transform: rotateZ(-5deg);
-                    transform: rotateZ(-5deg);
-          }
-          25% {
-            -webkit-transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
-                    transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
-          }
-          50% {
-            -webkit-transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
-                    transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
-          }
-          75% {
-            -webkit-transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
-                    transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
-          }
-          100% {
-            -webkit-transform: rotateZ(-5deg);
-                    transform: rotateZ(-5deg);
-          }
-        }
-        @keyframes shake-text {
-          0% {
-            -webkit-transform: rotateZ(-5deg);
-                    transform: rotateZ(-5deg);
-          }
-          25% {
-            -webkit-transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
-                    transform: translateX(1vw) translateY(1vw) rotateZ(-5deg);
-          }
-          50% {
-            -webkit-transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
-                    transform: translateX(-1vw) translateY(-1vw) rotateZ(-5deg);
-          }
-          75% {
-            -webkit-transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
-                    transform: translateX(-1.5vw) translateY(-0.5vw) rotateZ(-5deg);
-          }
-          100% {
-            -webkit-transform: rotateZ(-5deg);
-                    transform: rotateZ(-5deg);
-          }
-        }
-        .nyer:active svg {
-          fill: white;
-          -webkit-transform: rotateZ(-15deg);
-                  transform: rotateZ(-15deg);
-          -webkit-animation: shake-fa 0.2s steps(4) infinite;
-                  animation: shake-fa 0.2s steps(4) infinite;
-        }
-        @-webkit-keyframes shake-fa {
-          0% {
-            -webkit-transform: rotateZ(-15deg);
-                    transform: rotateZ(-15deg);
-          }
-          25% {
-            -webkit-transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
-                    transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
-          }
-          50% {
-            -webkit-transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
-                    transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
-          }
-          75% {
-            -webkit-transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
-                    transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
-          }
-          100% {
-            -webkit-transform: rotateZ(-15deg);
-                    transform: rotateZ(-15deg);
-          }
-        }
-        @keyframes shake-fa {
-          0% {
-            -webkit-transform: rotateZ(-15deg);
-                    transform: rotateZ(-15deg);
-          }
-          25% {
-            -webkit-transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
-                    transform: translateX(-1vw) translateY(1vw) rotateZ(-15deg);
-          }
-          50% {
-            -webkit-transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
-                    transform: translateX(1vw) translateY(-1vw) rotateZ(-15deg);
-          }
-          75% {
-            -webkit-transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
-                    transform: translateX(1.5vw) translateY(0.5vw) rotateZ(-15deg);
-          }
-          100% {
-            -webkit-transform: rotateZ(-15deg);
-                    transform: rotateZ(-15deg);
-          }
-        }
-        .nyer:active .sunburst, .nyer:active .sunburst:before, .nyer:active .sunburst:after {
-          opacity: 1;
-        }
-
-        .sunburst, .sunburst:before, .sunburst:after {
-          background: -webkit-radial-gradient(circle, #daa520, rgba(0, 0, 0, 0) 3%), -webkit-linear-gradient(82deg, goldenrod       49.5%, transparent 50.5%), -webkit-linear-gradient(98deg, transparent 49.5%, goldenrod 50.5%), -webkit-linear-      gradient(98deg, goldenrod 49.5%, transparent 50.5%), -webkit-linear-gradient(82deg, transparent 49.5%, goldenrod      50.5%), -webkit-linear-gradient(8deg, transparent 49.5%, goldenrod 50.5%), -webkit-linear-gradient(352deg,        goldenrod 49.5%, transparent 50.5%), -webkit-linear-gradient(352deg, transparent 49.5%, goldenrod 50.5%), -webkit      -linear-gradient(8deg, goldenrod 49.5%, transparent 50.5%);
-          background: radial-gradient(circle, #daa520, rgba(0, 0, 0, 0) 3%), linear-gradient(8deg, goldenrod 49.5%, transparent      50.5%), linear-gradient(-8deg, transparent 49.5%, goldenrod 50.5%), linear-gradient(-8deg, goldenrod 49.5%,        transparent 50.5%), linear-gradient(8deg, transparent 49.5%, goldenrod 50.5%), linear-gradient(82deg, transparent       49.5%, goldenrod 50.5%), linear-gradient(98deg, goldenrod 49.5%, transparent 50.5%), linear-gradient(98deg,       transparent 49.5%, goldenrod 50.5%), linear-gradient(82deg, goldenrod 49.5%, transparent 50.5%);
-          background-repeat: no-repeat;
-          background-size: 100% 100%, 50% 7%, 50% 7%, 50% 7%, 50% 7%, 7% 50%, 7% 50%, 7% 50%, 7% 50%;
-          background-position: 0 0, 0 46.5%, 0 53.5%, 100% 46.5%, 100% 53.5%, 46.5% 0, 53.5% 0, 46.5% 100%, 53.5% 100%;
-          opacity: 0;
-          width: 200vw;
-          height: 200vw;
-          margin: -100vw 0 0 -100vw;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-animation: rotate 4s linear infinite;
-                  animation: rotate 4s linear infinite;
-          -webkit-transition: opacity 0.05s ease;
-          transition: opacity 0.05s ease;
-          will-change: opacity, transform;
-          z-index: 1;
-        }
-        @-webkit-keyframes rotate {
-          from {
-            -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-          }
-          to {
-            -webkit-transform: rotate(360deg);
-                    transform: rotate(360deg);
-          }
-        }
-        @keyframes rotate {
-          from {
-            -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-          }
-          to {
-            -webkit-transform: rotate(360deg);
-                    transform: rotate(360deg);
-          }
-        }
-        .sunburst:before, .sunburst:after {
-          content: "";
-          position: absolute;
-          -webkit-animation-name: none;
-                  animation-name: none;
-        }
-        .sunburst:before {
-          -webkit-transform: rotate(30deg);
-                  transform: rotate(30deg);
-        }
-        .sunburst:after {
-          -webkit-transform: rotate(60deg);
-                  transform: rotate(60deg);
-        }
-
-        audio {
-            display: none;
-        }
-    </style>
-
 </head>
 
 <body itemscope itemtype="http://data-vocabulary.org/WebPage">
@@ -303,23 +63,17 @@ layout: null
     <audio src="{{ page.audio | prepend: '/' | prepend: site.baseurl | prepend: site.url }}"></audio>
 
     <!-- Play dat audio fam'ting -->
+    <script src="/nyer.js"></script>
+    <!-- ServiceWorker -->
     <script>
-        var button = document.querySelector('button');
-        var audio = document.querySelector('audio');
-
-        button.addEventListener('mousedown', function() {
-          audio.currentTime = 0;
-          audio.play();
-
-          document.title = "N-N-N-N-N-NYERRRRR!";
-          setTimeout( function() {
-            document.title = "NYERRR"
-          }, 600);
-
-          if ("vibrate" in navigator) {
-            navigator.vibrate(600);
-          }
-        });
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register("/serviceworker.js")
+                .then(function (reg) {
+                    console.log("SW register success", reg);
+                }, function (err) {
+                    console.log("SW register fail", err);
+                });
+        }
     </script>
 
 </body>

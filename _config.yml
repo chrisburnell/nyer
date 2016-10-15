@@ -8,6 +8,9 @@ author_twitter: iamchrisburnell
 url: https://nyer.audio
 baseurl: ""
 
+sass:
+  sass_dir: _sass
+
 url_twitter: https://twitter.com/iamchrisburnell
 
 copyright: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported

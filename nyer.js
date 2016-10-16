@@ -11,8 +11,8 @@
 
       document.title = "N-N-N-N-N-NYERRRRR!";
       setTimeout( function() {
-        document.title = "NYERRR"
-      }, 600);
+        document.title = "NYER"
+      }, 1000);
 
       if ("vibrate" in navigator) {
         navigator.vibrate(600);

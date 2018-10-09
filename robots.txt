@@ -10,4 +10,4 @@
 #  (oOoOo)_)_)
 
 User-agent: *
-Sitemap: https://nyer.audio/sitemap.xml
+Sitemap: https://nyer.chrisburnell.com/sitemap.xml
